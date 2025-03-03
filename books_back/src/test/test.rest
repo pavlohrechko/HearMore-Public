@@ -1,0 +1,63 @@
+### Generate Audio Request
+POST http://localhost:8080/api/books
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "1984",
+  "author": "George Orwell",
+  "genre": "Dystopian",
+  "description": "A novel about totalitarianism and surveillance.",
+  "publicationDate": "1949-06-08",
+  "text": "It was a bright cold day in April, and the clocks were striking thirteen.",
+  "voice": "alloy"
+}
+
+
+### Get All Books
+GET http://localhost:8080/api/books
+Content-Type: application/json
+Accept: application/json
+
+
+### Get All Speakers
+GET http://localhost:8080/api/speakers
+Content-Type: application/json
+Accept: application/json
+
+### Register a new user
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser1",
+  "email": "testuser1@example.com",
+  "password": "P@ssw0rd123",
+  "imagePath": "/images/testuser.png"
+}
+
+### Login with the registered user
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "P@ssw0rd123"
+}
+
+### Test cookie-based authentication (requires TokenValid annotation to work)
+GET http://localhost:8080/api/auth/cookie/test
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidGVzdHVzZXIiLCJpYXQiOjE3MzI5MDQ0ODUsImp0aSI6IjEiLCJyb2xlcyI6IiJ9.pW-idlGhRLlUjIsWQV4mUFymHsxF8CAUzLYLDRNcKMyfa6W-JstgG-pwS1UckfORwNTZGCp8Tm94phqu7JAmd1dCB5d1Ystk8cQobfilnzfrCFXVSfFbIUlBlTIlwqc-dGODjTn7Uvie2G0aw1d7QuijqEx1KRfD2xivGbcxDKIwthDFaCtjmo3xcnngmdyrK0Nt5qS0gXWQLgyqCKT0pvGPkwrPRduft_EIsBaakz0J3heWak7v0Uj518yZc7Uz46byktzuliN7KEaYA64AkI93JS_ww2dhBNZtV7aY_bbTEPFxRlLPWMZ352-KbXmmaiQP_udrOR8P0Jj7qKXjvg
+Authentication: ebbaf77c-5fc6-46fc-a631-f93ff8cc508e4c947d56-8196-4b7a-8759-8fe692bb0651d96de2a1-feb5-46f5-b149-951976c25d62e5879c52-53ca-4e35-b250-23b20381d35a419fca1d-5222-478f-ba13-91071429e049ec24b031-6475-4b3d-b288-6109be2c8f7dca0320d6-38f6-451f-a44d-e6377f88ba5615b6b76b-6edd-447b-9275-84c45c486fe6648571dc-23d7-4321-b37d-c9879fb404d22637f6ad-7550-47ab-90b8-b503e22e084bbb56aa94-2be5-42d9-9c84-299dacf3f1acf490f884-9596-4083-9c5f-72399e0b92802295ca02-e9ab-414e-9825-c2072674dc4a6870903d-b47d-4c37-9214-4cbc533e26806cc54492-7144-40e4-88a7-9f5e1b02af8edfb3a856-6219-453b-a567-264f8608aae79880ac59-d54a-47e0-a10f-ae7aab509dd74fae3fb2-1401-4d78-bfdf-9335a6c49470
+
+### Get Profile Request
+GET http://localhost:8080/api/user/profile
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidGVzdHVzZXIiLCJpYXQiOjE3MzI5MDY0NDQsImp0aSI6IjIiLCJyb2xlcyI6IiJ9.nuU3Ft2VQL3NRdQ7OswgukW-75yoEJfLXhOW1-7ItSOLsAC9rCwzy-PLt5HNWbb7qRRb2us2aP4Uyz731erRFEzjsJD2-7OJxFDQvHr3eIPupqRMfNrFAtLYleTBGoPBws08ApMpacmr3p9sKxzayTsUUp86hxHa0_GbM669gh2OT7n-jPjBw8md0Nznjox1dnIpOr64Q2Aeng1ov0jJxyNfAm8i1yObJMM0RVYv0_ouNPxRf-AHkJvZUjgKubgYQefG5BdPEj2ZEpQ_uRvXF3XA4-1wKb0gR3twUNj7eZLVCpeiQyxMNUjU5DR97Ze4T-y8K_Q1x783dC86GaDpYg
+Authentication: d3f2e23e-cc50-435d-907d-709c91e6b1885c822114-bd14-4459-bbac-9333b49f68180682a1a3-dfc6-4150-b6f6-f54971756c3844b82abd-66a7-499c-ba49-8542c0b18fd28ae90fa1-99fd-4114-a5fd-cf87bcf360d34ce4bb10-9744-4bf7-8924-f355c1d869aced6a9146-525d-4b91-8545-a44c9f6f5712dd0ecea2-20d0-4ae3-b0b5-1baec9d5d4df5825b3a9-1756-48c2-83d1-83a806c433c2013fa966-e076-4e10-a51f-a792824f9385c5ef4912-f81a-447d-bae1-30cc51a6de8ed4fbb878-3dce-44e3-9d48-ebde47e20b6816708576-fd0c-4f84-b7cf-125047f180f5e2bbb324-d672-4440-ba83-2e43ed29c92bddf974a0-bcf6-49c7-b038-06a0ca7db97116ff2e08-d1d7-4dcb-8f1a-1982f503714fa5ef2447-a4be-47b6-96a7-b7927b331d9b7937bf99-2bca-4ea0-a711-211bc972c752934dda6b-9e79-48bf-9cbc-c889b322cffc9b211e13-3239-4c6c-be63-2b21c45e8569f1c104c7-e87a-4428-ae83-8cbde2ea0417
+
+### Get Book by Id
+GET http://localhost:8080/api/books/7
+Content-Type: application/json
+
+
+

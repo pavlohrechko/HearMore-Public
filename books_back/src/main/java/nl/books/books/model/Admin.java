@@ -1,0 +1,1 @@
+package nl.books.books.model;import jakarta.persistence.Entity;import lombok.Getter;import lombok.NoArgsConstructor;import lombok.Setter;import java.time.LocalDateTime;@Entity@Getter@Setter@NoArgsConstructorpublic class Admin extends User {    /**     * Last login of the Admin.     */    public LocalDateTime lastLogin;}

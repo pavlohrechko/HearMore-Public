@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "strict": true, // Enable strict mode for better type safety
+    "jsx": "react-jsx", // Use react-jsx for improved DX with React 17+
+    "baseUrl": ".", // Required for paths
+    "paths": {
+      "@/*": ["src/*"] // Simplified for Vite compatibility
+    },
+    "esModuleInterop": true, // For compatibility with CommonJS modules
+    "forceConsistentCasingInFileNames": true, // Ensures consistent casing
+    "resolveJsonModule": true, // For importing JSON files
+    "isolatedModules": true, // Required for modern TypeScript with Vite
+    "noEmit": true // Avoid emitting unnecessary .js files
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

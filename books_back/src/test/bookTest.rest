@@ -1,0 +1,17 @@
+### Test Get Book By ID with Valid Token
+GET http://localhost:8080/api/books/auth/7
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidGVzdHVzZXIiLCJpYXQiOjE3MzM1ODkzMTcsImp0aSI6IjIiLCJyb2xlcyI6IiJ9.d6Six7Ad4Hsw894pqCXV2JVjQqFl2Y2A6SdckFAaQmm6xi4JyM3PkvngKvYwAAtVuF5BByIcWArjVZWrMoI8CIoozwVD7pwkJFmvxRwB3ubvDz1X32-zR8mrNg0kmmXu5JyAli5usnMGSgpAzxGh3SoRShO0_FzPWEh7VcZLpLATz2FpAPUTaSxEcp-RhisgGa2xa5Raru3u_iQo7MUF9OmzJzlgv9gvzoMD3YIyg4Lqc1IvEEJX-ZvxC__L7gDiwBrNw-h9KCJM4dHp8J-qYCjyj7dKEYjKU2tEDUCccZX38Z9O1yL-qVq6lza6tKDRSMIEEUWKW-WJwrAqcSvfCQ
+Authentication: 243510e6-9138-4726-9cc7-ab31863a6ffa0c441a1a-7901-4df2-92c3-2ff4318b8c2df34bfbe9-1cca-428d-972e-91e4424dde2ba3eb49e0-a2ea-4fec-aa1a-b320b596446326809582-996a-490e-b805-a76b9e59593832e49c0f-3fed-4bbf-a5d9-49a30e566cd84906f689-3480-4ed0-b2df-10953bb3907d5f433878-76dd-4f6a-a589-5272d217585f95f10312-1ce8-42b3-8890-af96ef93af2d4c4f3d21-d5d1-4dd3-abcc-1d4fd6a0c032de30e2de-1c35-4e63-a318-60fac1405c4201d9b686-4a3e-4c5d-a177-81f8e17d6afcf5ef6589-c03f-47a3-ad08-3d4119de2492295cf551-4a8f-416c-baf2-bc7af034ab9e2b6fa282-2811-4b1f-9dff-2eb8dc95127edefa6da9-a581-45df-974d-c45dcead0d9ab6f03b08-e33f-403e-98bd-861692490b08d731294f-12dc-4b1b-af5c-4b560cb0d710692b9478-990b-406e-b2e3-7e45f2c1d4dbe36a08bc-2eb4-4d6a-a5bc-b3fcb57f4ee0a0c2daad-fdd3-4f22-bdff-ddfaeca881733dde2759-ad26-4200-8e69-7bdba86cebba
+
+### Test Get Book By ID with Invalid Token
+GET http://localhost:8080/api/books/auth/7
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9
+
+### Test Get Book By ID without Token
+GET http://localhost:8080/api/books/auth/7
+
+
+### Validate
+GET http://localhost:8080/api/auth/validate
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidGVzdHVzZXIiLCJpYXQiOjE3MzM1ODg1NjEsImp0aSI6IjIiLCJyb2xlcyI6IiJ9.X3sUin-d7Hu1MjTJL5845JzNtztvqtZVgzjkMiEW65Hbmf-C8T4FtlJQRnUz3KDlTYl5Ep7uV38-pyduXP2XYRSfAYxF22PcVmufYPC3d0RIJF1yb-86Cg6w7EoCf-rgadlpJA4CeidZJ-UzPf7l2LXt5nQA00bywmxHfyTHfKZ3BKofm4NF319kdRg7Kgeuy76dhu4O-SjSnVRZUf7fEIBISTH1TCHbIdaKWKqk6R7dvcxl5Rq94UxdsUY2a4fIDVlPDpAZkYgnBd4Z636LWPsFzT3PdX_FD5jH-AuHrHqWqd3AoOps7LID3rM1Dn7ZurqrmyDykOaTDvqdR4KNag
+Authentication: a207e0c8-8f8f--b893-ea36d8ee2da6514e584a-d055-4853-bbcb-9c9e8be50f42e406e60a-01b2-4300-8a5f-25ca9fa455829f6a35fa-5eff-43e8-9f24-17a1770a040d5134f57e-4813-49d2-9f2a-34f3c0739bb346bed5ab-d7fa-447b-b7cc-f803897e122887b5697b-ca87-4b36-aad0-d1e00baaa722420290e5-10b3-4c52-94a3-462911723cd2c5638c66-a1bd-49bd-a102-248f3e11251348aa4542-ed81-4368-9e92-a96d5b70a894
